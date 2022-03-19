@@ -6,5 +6,6 @@ Moudular_Airial_Drone_Manuel
 
 
 * ROS melodic Installing and Configuring Environment(Upboard) 
-  * ㅇㄻㄴㅇㄻㄴㅇㄹ
-    * ㄴㅇㄹㄴㅇㄻㅇㄹㄴ
+  * Ubuntu 18.04 다운로드
+    업보드의 경우도 데스크탑과 동일하게 usb나 sd카드를 통해 iso파일을 이동저장장치에 굽습니다.
+    
