@@ -39,7 +39,7 @@ Moudular_Airial_Drone_Manuel
 
        ※ 우분투를 설치하는 동안 "automatic updates" 옵션은 체크해제해 주세요
        ※ 마이크로컨트롤러 수업에서 활용한 rufus와 같은 매체가 아닌 etcher라는 프로그램을 활용합니다.
-       ※ https://www.youtube.com/watch?v=Wh239HUfYI8 참조자료 링크
+       ※ https://www.youtube.com/watch?v=Wh239HUfYI8 우분투 설치 참조자료 링크 커널 설치 전까지만 참조하세요
        ※ https://github.com/up-board/up-community/wiki/Ubuntu_18.04 우분투 커널 설치 wiki
     
     2. 이미 설치된 우분투가 오작동하는 경우 포맷을 진행합니다. 
@@ -53,8 +53,57 @@ Moudular_Airial_Drone_Manuel
        - 우분투 메뉴창에 disk를 검색해 들어간뒤 
        - 시스템파일이 저장된 drive를 선택하여 포맷을 진행합니다.
        
-    3. 우분투 설치가 끝났다면 ROS를 다운받습니다. 
+    3. 우분투 설치가 끝났다면 ROS를 다운받습니다.
+    
+       다음의 설치과정을 따라 코드를 진행해 주세요.
       
+      - 소스 리스트 셋업 
+        sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+      
+      - key 셋업
+        sudo apt install curl # curl이 설치되지 않았다면 설치해 주세요
+        curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+        
+      - 설치
+        sudo apt update
+        
+        sudo apt install ros-melodic-desktop-full
+        
+      - 환경설정
+        
+        echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+        source ~/.bashrc
+        
+        sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+        
+        sudo apt install python-rosdep
+        
+        sudo rosdep init
+        
+        rosdep update
+        
+       
+      - 단축키 설정
+        
+        배쉬 파일을 열었을때의 환경을 다음과 같이 바꿔주세요(편의를 위함)
+        
+        xxx.xxx.xxx.xxx 는 자신의 IP
+
+        gedit ~/.bashrc
+        
+        # set ROS melodic
+        source /opt/ros/indigo/setup.bash
+        source ~/catkin_ws/devel/setup.bash
+
+        # set ROS Network
+        export ROS_MASTER_URI=http://xxx.xxx.xxx.xxx:11311
+        export ROS_HOSTNAME=xxx.xxx.xxx.xxx
+
+        # set ROS alias command
+        alias cw='cd ~/catkin_ws'
+        alias cs='cd ~/catkin_ws/src'
+        alias cm='cd ~/catkin_ws && catkin_make'
+
       
       
     
