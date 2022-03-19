@@ -19,6 +19,9 @@ Moudular_Airial_Drone_Manuel
        
        https://github.com/up-board/up-community/wiki/Ubuntu_18.04
        
+       - Install Ubuntu kernel 5.4.0 from PPA on Ubuntu 18.04 으로 쓰여져 있는 부분의 프로세스를 
+       동일하게 진행합니다. 
+       
        ※ 설치하는 동안 "automatic updates" 옵션은 체크해제해 주세요
        ※ 마이크로컨트롤러 수업에서 활용한 rufus와 같은 매체가 아닌 etcher라는 프로그램을 활용합니다.
     
