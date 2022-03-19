@@ -16,46 +16,31 @@ Moudular_Airial_Drone_Manuel
        
        
        
-       -  https://releases.ubuntu.com/bionic/ 링크에 접속해서 iso 파일을 다운받습니다.
+       -  https://releases.ubuntu.com/bionic/ 링크에 접속해서 64-bit PC (AMD64) desktop image 파일을 다운받습니다.
        -  https://www.balena.io/etcher/ 링크에 접속해서 etcher 파일(Download for Window x84|x64)을 다운로드 받습니다.
-       -     
-       
-       
-       
-       After the reboot you need to add our repository:
+       -  다운받은 image파일을 etcher에 넣고 start를 눌러 이미지를 굽습니다. 
+       -  구운 이미지 파일을 업보드에 연결한 뒤 업보드를 실행하면 나오는 install ubuntu를 눌러 다운로드 받습니다.
+       -  그 다음은 터미널 창을 열어 업보드만의 우분투 커널을 다운받습니다. 다음의 코드를 차례대로 입력하세요
 
-       sudo add-apt-repository ppa:aaeon-cm/5.4-upboard
+          sudo add-apt-repository ppa:aaeon-cm/5.4-upboard
+          
+          sudo apt update
+          
+          sudo apt-get autoremove --purge 'linux-.*generic'
+          
+          sudo apt-get install linux-generic-hwe-18.04-5.4-upboard
+          
+          sudo apt dist-upgrade -y
+          
+          sudo update-grub
+          
+          sudo reboot (꺼졌다고 놀라지 마세요 재부팅하는 겁니다.)
 
-       Update the repository list
 
-       sudo apt update
-
-       Remove all the generic installed kernel (select No on the question "Abort Kernel Removal")
-
-       sudo apt-get autoremove --purge 'linux-.*generic'
-
-       Install our kernel(18.04 and 20.04 share the same 5.4 kernel):
-
-       sudo apt-get install linux-generic-hwe-18.04-5.4-upboard
-
-       Install the updates:
-
-       sudo apt dist-upgrade -y
-
-       sudo update-grub
-
-       Reboot
-
-       sudo reboot
-
-       After the reboot, you can verify that the kernel is indeed installed by typing
-
-       
-       
-       
-       ※ 설치하는 동안 "automatic updates" 옵션은 체크해제해 주세요
+       ※ 우분투를 설치하는 동안 "automatic updates" 옵션은 체크해제해 주세요
        ※ 마이크로컨트롤러 수업에서 활용한 rufus와 같은 매체가 아닌 etcher라는 프로그램을 활용합니다.
        ※ https://www.youtube.com/watch?v=Wh239HUfYI8 참조자료 링크
+       ※ https://github.com/up-board/up-community/wiki/Ubuntu_18.04 우분투 커널 설치 wiki
     
     2. 이미 설치된 우분투가 오작동하는 경우 포맷을 진행합니다. 
        
@@ -69,6 +54,11 @@ Moudular_Airial_Drone_Manuel
        - 시스템파일이 저장된 drive를 선택하여 포맷을 진행합니다.
        
     3. 우분투 설치가 끝났다면 ROS를 다운받습니다. 
+      
+      
+      
+    
+      
       
        
        
