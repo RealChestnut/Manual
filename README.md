@@ -10,15 +10,17 @@ Moudular_Airial_Drone_Manuel
  ## * Ubuntu 18.04 다운로드
     
     1. 업보드의 경우도 데스크탑과 동일하게 usb나 sd카드를 통해 iso파일을 이동저장장치에 굽습니다.
+       
        우분투 18.04버전으로 다운받습니다.
        
        
        
        
        -  https://releases.ubuntu.com/bionic/ 링크에 접속해서 iso 파일을 다운받습니다.
-       -  다운 받은 iso파일을 
+       -  https://www.balena.io/etcher/ 링크에 접속해서 etcher 파일(Download for Window x84|x64)을 다운로드 받습니다.
+       -     
        
-       https://www.youtube.com/watch?v=Wh239HUfYI8 링크를 참조하세요
+       
        
        After the reboot you need to add our repository:
 
@@ -48,12 +50,12 @@ Moudular_Airial_Drone_Manuel
 
        After the reboot, you can verify that the kernel is indeed installed by typing
 
-       https://github.com/up-board/up-community/wiki/Ubuntu_18.04
        
        
        
        ※ 설치하는 동안 "automatic updates" 옵션은 체크해제해 주세요
        ※ 마이크로컨트롤러 수업에서 활용한 rufus와 같은 매체가 아닌 etcher라는 프로그램을 활용합니다.
+       ※ https://www.youtube.com/watch?v=Wh239HUfYI8 참조자료 링크
     
     2. 이미 설치된 우분투가 오작동하는 경우 포맷을 진행합니다. 
        
