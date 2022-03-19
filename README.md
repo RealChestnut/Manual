@@ -2,7 +2,8 @@ Moudular_Airial_Drone_Manuel
 ============================
 
 1. ROS melodic Installing and Configuring Environment(Upboard) 
-2. Moudlar_Airial_Drone_Package_review(shit)
+2. Download drone packages developed
+3. Moudlar_Airial_Drone_Package_review(shit)
 
 
 # 1. ROS melodic Installing and Configuring Environment(Upboard) 
@@ -103,6 +104,13 @@ Moudular_Airial_Drone_Manuel
         alias cw='cd ~/catkin_ws'
         alias cs='cd ~/catkin_ws/src'
         alias cm='cd ~/catkin_ws && catkin_make'
+        
+# 2. Download drone packages developed 
+  
+  ## * 깃허브에서 패키지 가져오기 
+  
+    1. ㅇㄹㅇㄹ
+  
 
       
       
