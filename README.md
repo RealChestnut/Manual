@@ -13,14 +13,44 @@ Moudular_Airial_Drone_Manuel
        우분투 18.04버전으로 다운받습니다.
        
        
+       
+       
+       -  https://releases.ubuntu.com/bionic/ 링크에 접속해서 iso 파일을 다운받습니다.
+       -  다운 받은 iso파일을 
+       
        https://www.youtube.com/watch?v=Wh239HUfYI8 링크를 참조하세요
        
-       우분투의 설치가 완료된 상태에서 다음의 링크에 접속하세요 
-       
+       After the reboot you need to add our repository:
+
+       sudo add-apt-repository ppa:aaeon-cm/5.4-upboard
+
+       Update the repository list
+
+       sudo apt update
+
+       Remove all the generic installed kernel (select No on the question "Abort Kernel Removal")
+
+       sudo apt-get autoremove --purge 'linux-.*generic'
+
+       Install our kernel(18.04 and 20.04 share the same 5.4 kernel):
+
+       sudo apt-get install linux-generic-hwe-18.04-5.4-upboard
+
+       Install the updates:
+
+       sudo apt dist-upgrade -y
+
+       sudo update-grub
+
+       Reboot
+
+       sudo reboot
+
+       After the reboot, you can verify that the kernel is indeed installed by typing
+
        https://github.com/up-board/up-community/wiki/Ubuntu_18.04
        
-       - Install Ubuntu kernel 5.4.0 from PPA on Ubuntu 18.04 으로 쓰여져 있는 부분의 프로세스를 
-       동일하게 진행합니다. 
+       
        
        ※ 설치하는 동안 "automatic updates" 옵션은 체크해제해 주세요
        ※ 마이크로컨트롤러 수업에서 활용한 rufus와 같은 매체가 아닌 etcher라는 프로그램을 활용합니다.
